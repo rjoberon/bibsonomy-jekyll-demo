@@ -4,6 +4,12 @@ title: Demo showing BibSonomy integration into Jekyll
 
 ## Demo showing BibSonomy integration into Jekyll
 
+This project contains a [Jekyll](http://jekyllrb.com/) plugin that
+shows how to use the
+[bibsonomy-ruby](https://github.com/rjoberon/bibsonomy-ruby) module to
+render posts from [BibSonomy](https://www.bibsonomy.org/) in a Jekyll
+project.
+
 ### Instructions
 
 After cloning the project and changing into its directory, the
