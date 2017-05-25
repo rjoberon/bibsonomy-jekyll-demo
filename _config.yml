@@ -1,1 +1,11 @@
 theme: jekyll-theme-minimal
+
+gems:
+   - bibsonomy
+
+bibsonomy_user: 
+bibsonomy_apikey: 
+bibsonomy_document_directory: pdf
+# other: apa, acm-siggraph
+bibsonomy_style: lncs
+# springer-lecture-notes-in-computer-science
