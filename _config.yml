@@ -1,5 +1,7 @@
 bibsonomy_user: 
-bibsonomy_apikey: 
+bibsonomy_apikey:
+# The directory where the documents are stored. Ensure that it exists.
+# To disable download and provision of documents, set to an empty value.
 bibsonomy_document_directory: pdf
 # other: apa, acm-siggraph
 bibsonomy_style: lncs
