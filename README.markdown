@@ -13,11 +13,17 @@ project.
 ### Instructions
 
 After cloning the project and changing into its directory, the
-following should build a running 
+following should build your site:
 
-1. Install dependencies:
+1. Install the dependencies:
 ```
-gem install bibsonomy github-pages citeproc-ruby
+bundle install
+```
+
+If you want to install the dependencies locally, then call
+
+```
+bundle install --path vendor/bundle
 ```
 
 2. Add BibSonomy user name and API key to [_config.yml](_config.yml):
@@ -30,7 +36,7 @@ bibsonomy_apikey: yourapikey
 
 4. Run Jekyll:
 ```
-jekyll build
+bundle exec jekyll build
 ```
 
 ### Notes
@@ -46,6 +52,3 @@ jekyll build
 ### Publication List
 
 {% bibsonomy yourusername myown 3 %}
-
-
-
