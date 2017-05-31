@@ -32,7 +32,7 @@ bibsonomy_user: yourusername
 bibsonomy_apikey: yourapikey
 ```
 
-3. Adapt the user name in `{% bibsonomy yourusername myown 3 %}` below to your user name.
+3. Adapt the user name in `{% bibsonomy user yourusername myown 3 %}` below to your user name.
 
 4. Run Jekyll:
 ```
@@ -50,6 +50,14 @@ bundle exec jekyll build
 - [Help on seting up Jekyll](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/)
 
 ### Publication List
+
+The plugin supports a variable number of parameters: GROUPING NAME
+TAG1 ... TAGN COUNT
+- GROUPING specifies whether posts for a user ("user") or group
+  ("group") shall be rendered.
+- NAME specifies the name of the user or group.
+- TAG1 ... TAGN is a variable number of tags the posts should have.
+- COUNT is the maximal number of posts that shall be rendered.
 
 #### User
 
