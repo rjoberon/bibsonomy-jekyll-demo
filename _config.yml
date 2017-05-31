@@ -1,4 +1,4 @@
-bibsonomy_user: 
+bibsonomy_user:
 bibsonomy_apikey:
 # The directory where the documents are stored. Ensure that it exists.
 # To disable download and provision of documents, set to an empty value.

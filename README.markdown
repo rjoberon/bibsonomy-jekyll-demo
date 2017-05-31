@@ -51,4 +51,10 @@ bundle exec jekyll build
 
 ### Publication List
 
-{% bibsonomy yourusername myown 3 %}
+#### User
+
+{% bibsonomy user jaeschke myown 3 %}
+
+#### Group
+
+{% bibsonomy group iccs test 3 %}

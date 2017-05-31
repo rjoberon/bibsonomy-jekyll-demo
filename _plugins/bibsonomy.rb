@@ -2,16 +2,34 @@
 require 'time'
 require 'bibsonomy/csl'
 
+
+#
+# Jekyll Tag to render posts from BibSonomy.
+#
+# Usage: {% bibsonomy GROUPING NAME TAG1 TAG2 ... TAGN COUNT %}
+#   where
+#     GROUPING is either "user" or "group" and specifies the type of NAME
+#     NAME is the name of the group or user
+#     TAG1 ... TAGN are tags
+#     COUNT is an integer, the number of posts to return 
+#
+# Changes:
+# 2017-05-31 (rja)
+# - added support for groups and multiple tags
+#
+
 module Jekyll
 
   class BibSonomyPostList < Liquid::Tag
     def initialize(tag_name, text, tokens)
       super
       parts = text.split(/\s+/)
-      @user = parts[0]
-      # TODO: support multiple tags
-      @tag = parts[1]
-      @count = Integer(parts[2])
+      @grouping = parts.shift
+      @name = parts.shift
+      # the last element is the number of posts
+      @count = Integer(parts.pop)
+      # everything else are the tags
+      @tags = parts
     end
     
     def render(context)
@@ -30,7 +48,7 @@ module Jekyll
       style = site.config['bibsonomy_style']
       csl.style = style
 
-      html = csl.render(@user, [@tag], @count)
+      html = csl.render(@grouping, @name, @tags, @count)
 
       # set date to now
       context.registers[:page]["date"] = Time.new
